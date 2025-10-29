@@ -136,6 +136,28 @@ figure {
   margin-top: 10px;
   margin-bottom: 20px;}
 
+footer.photo-credit {
+  max-width: 1200px;       /*  aligns footer with main content width */
+  margin: 50px auto 30px auto;
+  padding: 0 60px;         /*  same side padding as .container/.icon-container */
+  box-sizing: border-box;
+  text-align: center;
+  font-size: .8em;
+  line-height: 1.6;
+  color: #555;
+  border-top: 2px solid #ccc;  /* divider line */
+  padding-top: 20px;
+}
+
+footer.photo-credit a {
+  color: rgb(38, 59, 38);      
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer.photo-credit a:hover {
+  text-decoration: underline;
+}
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
 *********************************************************************/

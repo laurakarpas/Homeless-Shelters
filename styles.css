@@ -37,7 +37,7 @@ img {
 /* Large heading size for main title */
 h1 {
     font-size: 2.5em;
-    text-align: center;
+    text-align: left;
 }
 
 /* Medium heading size with gray color for section headers */
@@ -156,6 +156,8 @@ figure {
     /* Limit main content width and center it on large screens */
     .container {
         max-width: 1350px;
+        margin:0 auto;
+
     }
 
     /* Make h3 headings match the width of other content containers */
@@ -201,7 +203,7 @@ figure {
     
     /* Keep main text containers at reasonable width on very large screens */
     .container {
-        max-width: 1200px;
+        max-width: 1050px;
         padding: 10px;
     }
 

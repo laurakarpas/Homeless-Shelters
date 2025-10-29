@@ -25,6 +25,8 @@ body,
 html {
     /* Sets default font-size to 16px, ensuring 1em = 16px; */
     font-size: 16px;
+    font-family: Georgia;
+    padding: 10px;
 }
 
 /* Make all images responsive - they scale down to fit their container */
@@ -34,7 +36,8 @@ img {
 
 /* Large heading size for main title */
 h1 {
-    font-size: 3em;
+    font-size: 2.5em;
+    text-align: center;
 }
 
 /* Medium heading size with gray color for section headers */
@@ -53,6 +56,9 @@ h4 {
 /* Center align all h3 section headers */
 h3 {
     text-align: center;
+    margin-bottom: 100px;
+    color: rgb(38, 59, 38)
+
 }
 
 /* Set readable line spacing and font size for body text and captions */
@@ -60,6 +66,7 @@ figcaption,
 p {
     line-height: 1.5em;
     font-size: 1.2em;
+  
 }
 
 /* Style horizontal rules as thick gray bars */
@@ -97,14 +104,37 @@ figure {
 /* Style images within icon containers - block display, limited size, centered */
 .icon-container img {
     display: block;
-    max-width: 150px; /* Keeps icons reasonably small */
+    max-width: 600px; /* Keeps icons reasonably small */
     margin: auto; /* Centers the images horizontally */
+    
 }
 
 /* Center the text content under each graphic */
 .graphic-text {
     margin: auto;
+    margin-bottom: 100
+    px;
+
+   
 }
+
+.graphic:not(:last-child)::after {
+    content: "________";          
+    display: block;
+    text-align: center;
+    font-size: 5.5em;
+    color: #000000;
+    margin-top: 0px;
+    margin-bottom: 100px;
+}
+
+.icon-subtext {
+  text-transform: uppercase;  /* same style as h4 */
+  font-size: 1.4em;           /* same size as h4 */
+  text-align: center;         /* centers the text */
+  font-weight: bold;          /* makes it bold */
+  margin-top: 10px;
+  margin-bottom: 20px;}
 
 /*********************************************************************
   YOUR TABLET/DESKTOP STYLES GO HERE
@@ -113,19 +143,25 @@ figure {
     /* Any adjustments for tablets and larger go here.
     Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
     
+  /*Hide mobile separator lines on larger screens */
+    .graphic:not(:last-child)::after {
+        content: none;
+    }
     /* Make intro paragraph very wide for better readability on large screens */
     p.intro {
-        max-width: 95%;
+        max-width: 100%;
+        margin:auto;
     }
 
     /* Limit main content width and center it on large screens */
     .container {
-        max-width: 700px;
+        max-width: 1350px;
     }
 
     /* Make h3 headings match the width of other content containers */
     h3 {
-        max-width: 900px;
+        max-width: 1350px;
+        margin-bottom: 50px;
         /* margin: 0 auto; Centers the heading */
     }
 
@@ -133,7 +169,7 @@ figure {
     .icon-container {
         /* use text-align center to center the inline-block elements */
         text-align: center; /* Centers the inline-block columns within the container */
-        max-width: 900px; /* Matches width of other content */
+        max-width: 1350px; /* Matches width of other content */
         margin: 0 auto; /* Centers the entire container */
     }
 
@@ -145,11 +181,13 @@ figure {
         vertical-align: top; /* Aligns tops of columns (not baselines) */
         margin: 0 2%; /* Add some spacing between columns */
         text-align: left; /* Reset text alignment for content inside (overrides center from parent) */
+        margin-bottom: 30px;
     }
 
     /* Add padding around the text content in each graphic column */
     .graphic-text {
-        padding: 10px;
+        padding: 10px; 
+        
     }
 
 }
@@ -163,11 +201,15 @@ figure {
     
     /* Keep main text containers at reasonable width on very large screens */
     .container {
-        max-width: \550px;
+        max-width: 1200px;
+        padding: 10px;
     }
 
     /* Limit figure width slightly less than text for visual variety */
     figure {
         max-width: 700px;
+    }
+    .icon-container {
+        max-width: 1300px;
     }
 }
